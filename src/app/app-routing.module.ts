@@ -20,7 +20,19 @@ const routes: Routes = [
   {
     path: 'contact-us',
     component: ContactUsComponent
+  },  {
+    path: 'mens-fragrances',
+    loadChildren: () => import('./mens-fragrances/mens-fragrances.module').then( m => m.MensFragrancesPageModule)
+  },
+  {
+    path: 'womens-fragrances',
+    loadChildren: () => import('./womens-fragrances/womens-fragrances.module').then( m => m.WomensFragrancesPageModule)
+  },
+  {
+    path: 'candles',
+    loadChildren: () => import('./candles/candles.module').then( m => m.CandlesPageModule)
   }
+
 ];
 
 @NgModule({
