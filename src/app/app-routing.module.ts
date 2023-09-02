@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,14 @@ const routes: Routes = [
   {
     path: 'contact-us',
     component: ContactUsComponent
+  },
+  {
+    path: 'not-found',
+    component: NotFoundComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'not-found'
   }
 ];
 
