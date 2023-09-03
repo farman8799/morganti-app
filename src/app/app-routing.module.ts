@@ -15,6 +15,18 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'womens-fragrances',
+    loadChildren: () => import('./womens-fragrances/womens-fragrances.module').then( m => m.WomensFragrancesPageModule)
+  },
+  {
+    path: 'mens-fragrances',
+    loadChildren: () => import('./mens-fragrances/mens-fragrances.module').then( m => m.MensFragrancesPageModule)
+  },
+  {
+    path: 'candles',
+    loadChildren: () => import('./candles/candles.module').then( m => m.CandlesPageModule)
+  },
+  {
     path: 'about-us',
     component: AboutUsComponent
   },
