@@ -1,15 +1,16 @@
 {
   "name": "morganti-app",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Future Tech Data LLP",
+  "homepage": "https://ftechdata.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "start": "ionic serve",
+    "build": "ionic build --prod",
+    "watch": "ionic build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "build:local": "npx cap sync android && npm run build && npx cap build android"
   },
   "private": true,
   "dependencies": {
@@ -64,5 +65,5 @@
     "ts-node": "^8.3.0",
     "typescript": "~5.0.2"
   },
-  "description": "An Ionic project"
+  "description": "Morganti Luxury is a Swiss-Italian family-owned brand that specializes in perfumery and luxury goods. Our focus is to bring together precious fragrances and inspiration to offer a fresh perspective on luxury."
 }
