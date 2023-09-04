@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'future.tech.morganti',
   appName: 'morganti-app',
   webDir: 'www',
   server: {
