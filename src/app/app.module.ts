@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -10,6 +11,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,19 @@ import { HeaderComponent } from './header/header.component';
     AboutUsComponent,
     ContactUsComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    NotFoundComponent
   ],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    HttpClientModule
+  ],
+  providers: [
+  { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
