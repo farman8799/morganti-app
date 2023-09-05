@@ -1,7 +1,11 @@
+
 <ion-app>
   <ion-menu contentId="main-content" type="overlay">
     <ion-header>
+      
       <ion-toolbar>
+        <ion-buttons slot="start">
+        </ion-buttons>
         <ion-title>
           Menu
         </ion-title>
@@ -14,7 +18,9 @@
         <ion-note>sales@morganti.com</ion-note>
 
         <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+
           <ion-item routerDirection="root" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="[p.url]" lines="none" detail="false" [routerLinkActive]="['selected']">
+
             <ion-icon
               aria-hidden="true"
               slot="start"
