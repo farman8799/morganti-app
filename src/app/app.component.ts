@@ -10,5 +10,7 @@ export class AppComponent {
     { title: 'About Us', url: '/about-us', icon: 'information-circle' },
     { title: 'Contact Us', url: '/contact-us', icon: 'call' },
   ];
-  constructor() {}
+  
+  constructor(
+  ) {}
 }
