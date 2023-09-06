@@ -29,6 +29,9 @@
 
 
 
+.ion-page {
+    overflow: auto !important;
+}
 
 body{
     font-family: 'Montserrat', sans-serif !important;
@@ -46,10 +49,11 @@ body{
    
 
      /** font-weight**/
+     --fw-200: 200;
      --fw-300: 300;
-     --fw-300: 400;
-     --fw-300: 500;
-    
+     --fw-400: 400;
+     --fw-500: 500;
+     --fw-700: 700;
 
  
  

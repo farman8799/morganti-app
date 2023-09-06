@@ -3,6 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HomePage } from './home/home.page';
+import { FooterComponent } from './footer/footer.component';
 
 
 const routes: Routes = [
@@ -42,7 +44,8 @@ const routes: Routes = [
   {
     path: '**',
     redirectTo: 'not-found'
-  }
+  },
+ 
 ];
 
 @NgModule({
