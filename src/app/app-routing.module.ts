@@ -6,16 +6,16 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HomePage } from './home/home.page';
 import { FooterComponent } from './footer/footer.component';
 
+
 const routes: Routes = [
   {
     path: '',
-    component: HomePage,
-    children: [
-      {
-        path: 'home',
-        loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
-      },
-    ],
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'womens-fragrances',
