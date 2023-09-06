@@ -58,9 +58,9 @@ ion-toolbar{
 }
 
  /** font-size**/
-//  .fw-200{
-//     font-weight:  300 !important;
-//  }
+ .fw-200{
+    font-weight: var(--fw-200)  !important;
+ }
  .fw-300{
     font-weight: var(--fw-300) !important;
  }
