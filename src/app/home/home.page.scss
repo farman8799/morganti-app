@@ -18,6 +18,11 @@
     border-right: 0px !important;
     
 }
+ion-toolbar{
+    --background: #000;
+    --padding-top: 15px;
+    --padding-bottom: 15px;
+}
 .img-center {
     display: block;
     margin: auto;
@@ -46,23 +51,33 @@
     font-size: var(--fs-16);
 }
 .fs-20{
-    font-size: var(--fs-20);
+    font-size: var(--fs-20) !important;
 }
 .fs-24{
     font-size: var(--fs-24) !important;
 }
 
  /** font-size**/
+//  .fw-200{
+//     font-weight:  300 !important;
+//  }
  .fw-300{
-    font-weight: var(--fw-300);
+    font-weight: var(--fw-300) !important;
  }
  .fw-400{
     font-weight:  var(--fw-400);
  }
  .fw-500{
-    font-weight:  var(--fw-400);
+    font-weight:  var(--fw-500) !important;
+ }
+ .fw-700{
+    font-weight:  var(--fw-700) !important;
  }
 
  .font-style{
     font-style: italic;
+ }
+ 
+ .shadow-none{
+    box-shadow: none;
  }
