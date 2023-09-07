@@ -5,6 +5,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomePage } from './home/home.page';
 import { FooterComponent } from './footer/footer.component';
+import { TermConditionComponent } from './term-condition/term-condition.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { DeliveryReturnComponent } from './delivery-return/delivery-return.component';
+import { AddressComponent } from './address/address.component';
 
 
 const routes: Routes = [
@@ -41,6 +45,22 @@ const routes: Routes = [
     path: 'not-found',
     component: NotFoundComponent
   },
+  {
+path:'term-condition',
+component:TermConditionComponent
+  },
+  {
+    path:'privacy-policy',
+    component:PrivacyPolicyComponent
+      },
+      {
+        path:'delivery-return',
+        component:DeliveryReturnComponent
+          },
+          {
+            path:'address',
+            component:AddressComponent
+              },
   {
     path: '**',
     redirectTo: 'not-found'
