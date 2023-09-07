@@ -13,5 +13,7 @@ export class AppComponent {
     { title: 'Candles', url: '/about-us' },
     { title: 'Contact Us', url: '/contact-us', icon: 'call' },
   ];
-  constructor() {}
+  
+  constructor(
+  ) {}
 }
