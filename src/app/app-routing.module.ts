@@ -10,68 +10,74 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { DeliveryReturnComponent } from './delivery-return/delivery-return.component';
 import { AddressComponent } from './address/address.component';
 
-
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: '',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    loadChildren: () =>
+      import('./home/home.module').then((m) => m.HomePageModule),
   },
   {
     path: 'womens-fragrances',
-    loadChildren: () => import('./womens-fragrances/womens-fragrances.module').then( m => m.WomensFragrancesPageModule)
+    loadChildren: () =>
+      import('./womens-fragrances/womens-fragrances.module').then(
+        (m) => m.WomensFragrancesPageModule
+      ),
   },
   {
     path: 'mens-fragrances',
-    loadChildren: () => import('./mens-fragrances/mens-fragrances.module').then( m => m.MensFragrancesPageModule)
+    loadChildren: () =>
+      import('./mens-fragrances/mens-fragrances.module').then(
+        (m) => m.MensFragrancesPageModule
+      ),
   },
   {
     path: 'candles',
-    loadChildren: () => import('./candles/candles.module').then( m => m.CandlesPageModule)
+    loadChildren: () =>
+      import('./candles/candles.module').then((m) => m.CandlesPageModule),
   },
   {
     path: 'about-us',
-    component: AboutUsComponent
+    component: AboutUsComponent,
   },
   {
     path: 'contact-us',
-    component: ContactUsComponent
+    component: ContactUsComponent,
   },
   {
     path: 'not-found',
-    component: NotFoundComponent
+    component: NotFoundComponent,
   },
   {
-path:'term-condition',
-component:TermConditionComponent
+    path: 'term-condition',
+    component: TermConditionComponent,
   },
   {
-    path:'privacy-policy',
-    component:PrivacyPolicyComponent
-      },
-      {
-        path:'delivery-return',
-        component:DeliveryReturnComponent
-          },
-          {
-            path:'address',
-            component:AddressComponent
-              },
+    path: 'privacy-policy',
+    component: PrivacyPolicyComponent,
+  },
+  {
+    path: 'delivery-return',
+    component: DeliveryReturnComponent,
+  },
+  {
+    path: 'address',
+    component: AddressComponent,
+  },
   {
     path: '**',
-    redirectTo: 'not-found'
+    redirectTo: 'not-found',
   },
- 
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
