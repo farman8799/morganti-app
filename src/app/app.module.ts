@@ -13,7 +13,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { TermConditionComponent } from './term-condition/term-condition.component';
 import { DeliveryReturnComponent } from './delivery-return/delivery-return.component';
 import { AddressComponent } from './address/address.component';
-import { HomePageModule } from './home/home.module';
+
 
 @NgModule({
   declarations: [
@@ -31,8 +31,7 @@ import { HomePageModule } from './home/home.module';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    SharedModule,
-    HomePageModule
+    SharedModule
   
   ],
   providers: [
