@@ -32,12 +32,19 @@
       </ion-list>
     </ion-content>
   </ion-menu>
-
-  <div class="ion-page" id="main-content">
-    <ion-router-outlet id="main-content"></ion-router-outlet>
-    <app-footer></app-footer>
-    
+  <ion-content>
+    <div class="ion-page" id="main-content">
+      <ion-router-outlet id="main-content"></ion-router-outlet>
+      <!-- <app-footer></app-footer> -->
+    </div>
   
-  </div>
- 
+  </ion-content>
+  <!-- <ion-footer>
+    <app-footer></app-footer>
+  </ion-footer> -->
+  <ion-footer>
+    <ion-toolbar>
+          Footer
+    </ion-toolbar>
+  </ion-footer>
 </ion-app>
