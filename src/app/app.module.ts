@@ -14,6 +14,7 @@ import { TermConditionComponent } from './term-condition/term-condition.componen
 import { DeliveryReturnComponent } from './delivery-return/delivery-return.component';
 import { AddressComponent } from './address/address.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { AddressComponent } from './address/address.component';
     IonicModule.forRoot(),
     AppRoutingModule,
     SharedModule
+  
   ],
   providers: [
   { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
