@@ -5,8 +5,6 @@ import { IonicModule } from '@ionic/angular';
 import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
 import { SharedModule } from '../shared/shared.module';
-import { ProductComponent } from '../product/product.component';
-
 
 @NgModule({
   imports: [
@@ -16,6 +14,8 @@ import { ProductComponent } from '../product/product.component';
     HomePageRoutingModule,
     SharedModule
   ],
-  declarations: [HomePage,ProductComponent]
+  declarations: [
+    HomePage
+  ]
 })
 export class HomePageModule {}

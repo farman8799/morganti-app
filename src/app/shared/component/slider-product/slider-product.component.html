@@ -1,0 +1,35 @@
+<ng-container *ngIf="sliderProducts">
+  <ion-row>
+    <ion-col size="12">
+      <h1 class="ion-text-center text-black fs-24 fw-400 border py-10">
+        {{ sliderProducts.title }}
+      </h1>
+    </ion-col>
+  </ion-row>
+
+  <ng-container *ngFor="let product of sliderProducts.products">
+    <ion-card class="shadow-none">
+      <ion-img [src]="product.image" alt="product"></ion-img>
+      <ion-card-header>
+        <ion-card-title class="ion-text-center fs-24">
+          {{ product.name }}
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content class="ion-text-center">
+        <div class="d-flex ion-align-items-center ion-justify-content-center">
+          <h2 class="fs-20 fw-700 text-black">
+            {{ product.price | currency:product.currency }}
+            <span class="fw-200 ps-10">
+              Plus GCC Duty & VAT
+            </span>
+          </h2>
+          <ion-img
+            src="./../../../../assets/icon.svg"
+            class="ps-10"
+            alt="icon"
+          ></ion-img>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+</ng-container>
