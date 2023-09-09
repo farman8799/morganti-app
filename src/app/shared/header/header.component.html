@@ -1,10 +1,41 @@
-<ion-header>
+<ion-header class="position-relative">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button color="light"></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Morganti Luxury
+     <div class="d-flex">
+      <ion-img
+      src="../../../assets/home-logo.svg"
+      alt="product"
+    ></ion-img>
+  
+     </div>
     </ion-title>
+
   </ion-toolbar>
+  <div class="position-absolute top-0 end-0 mt-2 me-3 pt-1" style="z-index: 999;">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle rounded-circle float-end p-0" style="width: 40px;height: 40px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <ion-img
+        src="../../../assets/country-logo.svg"
+        alt="country-logo"
+      ></ion-img>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#"> <ion-img
+          src="../../../assets/country-logo.svg" style="width: 40px;height: 40px;" 
+          alt="country-logo"
+        ></ion-img></a></li>
+        <li><a class="dropdown-item" href="#"> <ion-img
+          src="../../../assets/country-logo.svg" style="width: 40px;height: 40px;" 
+          alt="country-logo"
+        ></ion-img></a></li>
+        <li><a class="dropdown-item" href="#"> <ion-img
+          src="../../../assets/country-logo.svg" style="width: 40px;height: 40px;" 
+          alt="country-logo"
+        ></ion-img></a></li>
+      </ul>
+    </div>
+  </div>
 </ion-header>
