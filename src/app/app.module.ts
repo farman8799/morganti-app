@@ -13,6 +13,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { TermConditionComponent } from './term-condition/term-condition.component';
 import { DeliveryReturnComponent } from './delivery-return/delivery-return.component';
 import { AddressComponent } from './address/address.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { AddressComponent } from './address/address.component';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   
   ],
   providers: [
