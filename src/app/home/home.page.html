@@ -11,11 +11,9 @@
         </p>
       </ion-col>
     </ion-row>
-
     <ng-container *ngFor="let product of products">
       <app-card-product
         [products]="product.cardProducts"></app-card-product>
-        
       <app-slider-product
         [sliderProducts]="product.sliderProducts"></app-slider-product>
     </ng-container>
