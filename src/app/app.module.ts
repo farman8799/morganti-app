@@ -9,6 +9,12 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedModule } from './shared/shared.module';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermConditionComponent } from './term-condition/term-condition.component';
+import { DeliveryReturnComponent } from './delivery-return/delivery-return.component';
+import { AddressComponent } from './address/address.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +23,18 @@ import { SharedModule } from './shared/shared.module';
     ContactUsComponent,
     FooterComponent,
     NotFoundComponent,
+    PrivacyPolicyComponent,
+    TermConditionComponent,
+    DeliveryReturnComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
+  
   ],
   providers: [
   { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
