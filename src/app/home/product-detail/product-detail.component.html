@@ -1,5 +1,223 @@
-<p>
-  product-detail works!
-</p>
+<p>product-detail works!</p>
 
 <a routerLink="/cart-summary">go to cart summary</a>
+<ion-grid>
+  <ion-row class="border-top border-bottom gray-color">
+    <ion-col size="12">
+      <ion-breadcrumbs>
+        <ion-breadcrumb class="font-color fs-14" href="#home"
+          ><ion-icon name="home-outline" class="pe-2"></ion-icon
+          >Shop</ion-breadcrumb
+        >
+        <ion-breadcrumb
+          class="font-color fs-14 fw-light p-0"
+          href="#electronics"
+          >Luxury Perfumes women</ion-breadcrumb
+        >
+        <ion-breadcrumb
+          class="font-color fs-14 fw-light p-0"
+          href="#electronics"
+          >Cèdre d’Or by Morganti</ion-breadcrumb
+        >
+      </ion-breadcrumbs>
+    </ion-col>
+  </ion-row>
+  <ion-row class="mt-3">
+    <ion-col size="12">
+      <ion-card class="shadow-none">
+        <ion-img src="../../assets/woman-img-2.jpeg" alt="product"></ion-img>
+
+        <ion-card-header class="p-0 mt-4">
+          <ion-card-content class="ion-text-center p-0">
+            <!-- <h4>LUXURY PERFUMES, WOMEN</h4> -->
+            <ion-card-title class="ion-text-start fs-2 fw-bold">
+              Cèdre d’Or by Morganti</ion-card-title
+            >
+          </ion-card-content>
+        </ion-card-header>
+        <ion-card-content class="ion-text-start ps-0">
+          <div class="d-flex ion-align-items-center ion-justify-content-start">
+            <h2 class="text-black fs-3 fw-400">AED 1,250.00</h2>
+            <ion-img
+              src="../../assets/icon.svg"
+              class="ps-3"
+              alt="icon"
+            ></ion-img>
+          </div>
+        </ion-card-content>
+        <ion-card-content class="ion-text-start pt-0 ps-0">
+          <h2 class="text-black fs-4 fw-200">Size: <strong>50 ml</strong></h2>
+          <p class="py-3">
+            Introducing Cèdre d’Or by Morganti Luxury – a luxurious fragrance
+            capturing the essence of femininity. The floral and powdery notes of
+            Iris are balanced by the woody and earthy scent of Cedarwood,
+            creating a complex and captivating fragrance that is sure to turn
+            heads.
+          </p>
+          <p>
+            The sweet and citrusy notes of Neroli add a touch of freshness and
+            vitality, while the deep and smoky aroma of Somalia Frankincense
+            gives the fragrance a mysterious and hypnotic quality.
+          </p>
+          <p class="py-3">
+            Cèdre d’Or is made with the finest ingredients, free from harmful
+            chemicals. Embrace your confident and elegant self with the
+            enchanting fragrance of Cèdre d’Or today.
+          </p>
+          <h3 class="text-dark fs-6 fw-bold">
+            Top Notes : Iris and Orange Blossom
+          </h3>
+          <h2 class="text-black fw-light fs-12 fw-bold pt-3">
+            SKU: <span class="fw-700">731093299940</span>
+          </h2>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col
+      size="12"
+      class="ps-4 pe-0 border-top border-bottom gray-color py-3"
+    >
+      <span class="d-inline">
+        <button id="minus">−</button>
+        <input type="number" value="0" id="input" />
+        <button id="plus">+</button>
+      </span>
+      <a
+        class="rounded-pill fs-14 bg-dark py-3 px-4 text-white text-decoration-none ms-3"
+        href="#"
+        ><ion-icon name="bag-handle-outline" class="pe-2"></ion-icon>ADD TO
+        CART</a
+      >
+    </ion-col>
+  </ion-row>
+  <ion-row class="my-5">
+    <ion-col size="12">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed justify-content-end flex-row-reverse w-100 border-0 fw-bold fs-14" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+           <span class="ms-3">  Description	</span>			
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse pb-3" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body fs-14">Morganti Luxury is proud to present its latest addition to its collection of luxury fragrances for women – Cèdre d’Or, a mesmerizing fragrance that embodies elegance, sophistication, and femininity. As one of the most exclusive women’s fragrances in the market, Cèdre d’Or is a perfect blend of oriental and floral aromas that exudes luxury and grace. Fragrance for women has always been an essential part of their grooming routine. It is a reflection of their personality and enhances their beauty and confidence.
+            
+            </div>
+            <a
+              class="fs-14 text-dark mt-2 ps-3"
+              href="#"
+              > Read more</a
+            >
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed justify-content-end flex-row-reverse w-100 border-0 border-bottom fw-bold fs-14" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+             <span class="ms-3">  Women's Fragrance	</span>		
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+          </div>
+        </div>
+       
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="col-12">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <ion-card class="shadow-none">
+              <ion-img src="../../assets/product-img.svg" alt="product"></ion-img>
+              <ion-card-header>
+                <ion-card-content class="ion-text-center fs-6 p-0">
+                  <h4>Luxury Perfumes WOMEN</h4>
+                  <ion-card-title class="ion-text-center small fw-light"
+                    >Salman by Morganti</ion-card-title
+                  >
+                </ion-card-content>
+                
+              </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                <div class="d-flex ion-align-items-center ion-justify-content-center">
+                  <h2 class="fs-20 fw-700 text-black">
+                    AED 1,250.00 
+                  </h2>
+                  <ion-img
+                    src="../../assets/icon.svg"
+                    class="ps-3"
+                    alt="icon"
+                  ></ion-img>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </div>
+          <div class="carousel-item">
+            <ion-card class="shadow-none">
+              <ion-img src="../../assets/product-img.svg" alt="product"></ion-img>
+              <ion-card-header>
+                <ion-card-content class="ion-text-center fs-6 p-0">
+                  <h4>Luxury Perfumes WOMEN</h4>
+                  <ion-card-title class="ion-text-center small fw-light"
+                    >Salman by Morganti</ion-card-title
+                  >
+                </ion-card-content>
+                
+              </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                <div class="d-flex ion-align-items-center ion-justify-content-center">
+                  <h2 class="fs-20 fw-700 text-black">
+                    AED 1,250.00 
+                  </h2>
+                  <ion-img
+                    src="../../assets/icon.svg"
+                    class="ps-3"
+                    alt="icon"
+                  ></ion-img>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </div>
+          <div class="carousel-item">
+            <ion-card class="shadow-none">
+              <ion-img src="../../assets/product-img.svg" alt="product"></ion-img>
+              <ion-card-header>
+                <ion-card-content class="ion-text-center fs-6 p-0">
+                  <h4>Luxury Perfumes WOMEN</h4>
+                  <ion-card-title class="ion-text-center small fw-light"
+                    >Salman by Morganti</ion-card-title
+                  >
+                </ion-card-content>
+                
+              </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                <div class="d-flex ion-align-items-center ion-justify-content-center">
+                  <h2 class="fs-20 fw-700 text-black">
+                    AED 1,250.00 
+                  </h2>
+                  <ion-img
+                    src="../../assets/icon.svg"
+                    class="ps-3"
+                    alt="icon"
+                  ></ion-img>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
