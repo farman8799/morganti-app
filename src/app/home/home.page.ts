@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  productList:any[] = [];
   products = [
     {
       cardProducts: [
@@ -115,9 +117,17 @@ export class HomePage implements OnInit {
     }
     
   ]
-  constructor() { }
+  constructor(private productService:ProductService) { }
 
   ngOnInit() {
+    this.productService.getProducts().subscribe({
+      next: (data: any) => {
+        this.productList = data;
+        console.log('Products:', this.productList);
+      },
+      error: (error) => {
+        console.error('Error fetching products:', error);
+      },
+    });
   }
-
 }
