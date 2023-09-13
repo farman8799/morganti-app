@@ -1,35 +1,51 @@
-<ng-container *ngIf="sliderProducts">
-  <ion-row>
-    <ion-col size="12">
-      <h1 class="ion-text-center text-black fs-24 fw-400 border py-10">
-        {{ sliderProducts.title }}
-      </h1>
-    </ion-col>
-  </ion-row>
+<div
+  id="carouselExampleControls"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <ng-container *ngFor="let product of products; let i = index">
+      <div class="carousel-item" [ngClass]="i === 0 ? 'active': ''">
+        <ion-card class="shadow-none">
+          <ion-img [src]="product.images[0].src" alt="product"></ion-img>
+          <ion-card-header>
+            <ion-card-title class="ion-text-center fs-24">
+              {{ product.name }}
+            </ion-card-title>
+          </ion-card-header>
 
-  <ng-container *ngFor="let product of sliderProducts.products">
-    <ion-card class="shadow-none">
-      <ion-img [src]="product.image" alt="product"></ion-img>
-      <ion-card-header>
-        <ion-card-title class="ion-text-center fs-24">
-          {{ product.name }}
-        </ion-card-title>
-      </ion-card-header>
-      <ion-card-content class="ion-text-center">
-        <div class="d-flex ion-align-items-center ion-justify-content-center">
-          <h2 class="fs-20 fw-700 text-black">
-            {{ product.price | currency:product.currency }}
-            <span class="fw-200 ps-10">
-              Plus GCC Duty & VAT
-            </span>
-          </h2>
-          <ion-img
-            src="./../../../../assets/icon.svg"
-            class="ps-10"
-            alt="icon"
-          ></ion-img>
-        </div>
-      </ion-card-content>
-    </ion-card>
-  </ng-container>
-</ng-container>
+          <ion-card-content class="ion-text-center">
+            <div class="d-flex ion-align-items-center ion-justify-content-center">
+              <h2 class="fs-20 fw-700 text-black">
+                {{ product.price | currency:'AED'}}
+                <span class="fw-200 ps-10">
+                  Plus GCC Duty & VAT
+                </span>
+              </h2>
+              <ion-img src="../../assets/icon.svg" class="ps-10" alt="icon"></ion-img>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ng-container>
+  </div>
+  
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

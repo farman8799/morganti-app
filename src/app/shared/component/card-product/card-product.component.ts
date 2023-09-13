@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card-product.component.scss'],
 })
 export class CardProductComponent  implements OnInit {
-  @Input('products') products: any[] = [];
+  @Input('product') product: any;
 
   constructor() { }
 
