@@ -18,5 +18,13 @@ export class ProductService {
     const apiUrl = this.url + endpoint + params;
 
     return this.http.get(apiUrl);
-}
+  }
+
+  getCategories() {
+    const endpoint = 'products/categories';
+    const params = `?consumer_key=${this.consumerKey}&consumer_secret=${this.consumerSecret}`;
+    const apiUrl = this.url + endpoint + params;
+
+    return this.http.get(apiUrl);
+  }
 }
