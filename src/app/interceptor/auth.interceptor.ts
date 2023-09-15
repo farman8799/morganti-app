@@ -11,20 +11,27 @@ import { environment } from 'src/environments/environment';
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
   private API_URL = environment.WooCommerce.API_URL;
-  private consumer_key = environment.WooCommerce.CONSUMER_KEY;
-  private consumer_secret = environment.WooCommerce.CONSUMER_SECRET;
+  private consumerKey = environment.WooCommerce.CONSUMER_KEY;
+  private consumerSecret = environment.WooCommerce.CONSUMER_SECRET;
+
   constructor() {}
 
   intercept(
     request: HttpRequest<unknown>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
-    const req = request.clone({
-      url: `${this.API_URL}?consumer_key=${this.consumer_key}
-      &consumer_secret=${this.consumer_secret}`,
-    });
-    console.log(req);
+    request = this.setUrl(request);
 
-    return next.handle(req);
+    return next.handle(request);
+  }
+
+  private setUrl(request: HttpRequest<unknown>): HttpRequest<unknown> {
+    let url = this.API_URL + this.addConsumerKeys(request.url); 
+    return request.clone({ url });
+  }
+
+  private addConsumerKeys(url: string): string {
+    return `${url}?consumer_key=${this.consumerKey}
+    &consumer_secret=${this.consumerSecret}`
   }
 }
