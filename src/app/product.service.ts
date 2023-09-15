@@ -17,7 +17,7 @@ export class ProductService {
     const params = `?consumer_key=${this.consumerKey}&consumer_secret=${this.consumerSecret}`;
     const apiUrl = this.url + endpoint + params;
 
-    return this.http.get(apiUrl);
+    return this.http.get(endpoint);
   }
 
   getCategories() {
@@ -25,6 +25,6 @@ export class ProductService {
     const params = `?consumer_key=${this.consumerKey}&consumer_secret=${this.consumerSecret}`;
     const apiUrl = this.url + endpoint + params;
 
-    return this.http.get(apiUrl);
+    return this.http.get(endpoint);
   }
 }
