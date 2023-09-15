@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./slider-product.component.scss'],
 })
 export class SliderProductComponent  implements OnInit {
-  @Input('sliderProducts') sliderProducts: any;
+  @Input('sliderProducts') products: any[] = [];
 
   constructor() { }
 
