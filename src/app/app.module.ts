@@ -11,11 +11,13 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { TermConditionComponent } from './term-condition/term-condition.component';
 import { DeliveryReturnComponent } from './delivery-return/delivery-return.component';
 import { AddressComponent } from './address/address.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import { SideMenuComponent } from './shared/component/side-menu/side-menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -37,10 +39,18 @@ import { HeaderComponent } from './shared/header/header.component';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule
+    SharedModule,
+    HttpClientModule,
+  
   ],
   providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+
   ],
   bootstrap: [AppComponent],
 })
