@@ -1,14 +1,64 @@
 <ion-content [fullscreen]="true">
   <div id="video-container">
-    <video  autoplay loop muted>
-        <source src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/Women-Perfume.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+    <video id="video-full" autoplay muted>
+      <source
+        src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/Women-Perfume.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
     </video>
-   <div  id="fullscreen">
-    <!-- <ion-icon name="arrow-forward-circle-outline" size="large"></ion-icon> -->
-    <button class="bg-transparent border border-light rounded-pill d-flex justify-content-center align-items-center">
-      <ion-icon name="chevron-forward-outline" size="large"></ion-icon>
-    </button>
-   </div>
-</div>
+    <div id="fullscreen">
+      <!-- <ion-icon name="arrow-forward-circle-outline" size="large"></ion-icon> -->
+      <a
+        href="/tabs/explore#sectionVideo"
+        class="bg-transparent border border-light rounded-pill d-flex justify-content-center align-items-center"
+      >
+        <ion-icon name="chevron-down-outline" size="large"></ion-icon>
+      </a>
+    </div>
+  </div>
+  <div id="sectionVideo" class="pt-4">
+    <div  class="position-relative mb-3">
+      <video controls height="200" width="100%">
+        <source
+          src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/men-perfume.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="content position-absolute bottom-0 translate-middle start-50 text-center">
+        <h4 class="mb-0">Mens fragrance</h4>
+        <small>Discover Go-14 Bag</small>
+        <h4>Shop Now</h4>
+      </div>
+    </div>
+    <div class="position-relative mb-3">
+      <video controls height="200" width="100%">
+        <source
+          src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/Women-Perfume.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="content position-absolute bottom-0 translate-middle start-50 text-center">
+        <h4 class="mb-0">Mens fragrance</h4>
+        <small>Discover Go-14 Bag</small>
+        <h4>Shop Now</h4>
+      </div>
+    </div>
+    <div class="position-relative mb-3">
+      <video controls height="200" width="100%">
+        <source
+          src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/WhatsApp-Video-2023-09-11-at-7.15.20-PM.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="content position-absolute bottom-0 translate-middle start-50 text-center">
+        <h4 class="mb-0">Mens fragrance</h4>
+        <small>Discover Go-14 Bag</small>
+        <h4>Shop Now</h4>
+      </div>
+    </div>
+  </div>
 </ion-content>
