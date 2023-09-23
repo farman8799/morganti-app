@@ -1,13 +1,14 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>explore</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">explore</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div id="video-container">
+    <video  autoplay loop muted>
+        <source src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/Women-Perfume.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+   <div  id="fullscreen">
+    <!-- <ion-icon name="arrow-forward-circle-outline" size="large"></ion-icon> -->
+    <button class="bg-transparent border border-light rounded-pill d-flex justify-content-center align-items-center">
+      <ion-icon name="chevron-forward-outline" size="large"></ion-icon>
+    </button>
+   </div>
+</div>
 </ion-content>
