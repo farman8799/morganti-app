@@ -26,7 +26,7 @@ import { SharedModule } from './shared/shared.module';
     HeaderComponent,
     SideMenuComponent,
     FooterComponent,
-    AboutUsComponent,
+    // AboutUsComponent,
     ContactUsComponent,
     NotFoundComponent,
     PrivacyPolicyComponent,
