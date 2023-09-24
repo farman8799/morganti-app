@@ -18,30 +18,10 @@
   </div>
 
   <div id="sectionVideo" class="pt-4">
-    <div  class="position-relative mb-3">
+    <div  class="position-relative mb-3" *ngFor="let item of videoProperty">
       <video controls height="200" width="100%" poster="">
         <source
-          src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/men-perfume.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <div class="position-relative mb-3">
-      <video controls height="200" width="100%" poster="">
-        <source
-          src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/Women-Perfume.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    
-    <div class="position-relative mb-3">
-      <video controls height="200" width="100%" poster="">
-        <source
-          src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/WhatsApp-Video-2023-09-11-at-7.15.20-PM.mp4"
+        [src]="item.videoUrl"
           type="video/mp4"
         />
         Your browser does not support the video tag.
