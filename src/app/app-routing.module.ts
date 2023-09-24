@@ -1,13 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { TermConditionComponent } from './term-condition/term-condition.component';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-import { DeliveryReturnComponent } from './delivery-return/delivery-return.component';
-import { AddressComponent } from './address/address.component';
-import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 
 const routes: Routes = [
   {
