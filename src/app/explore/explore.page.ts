@@ -25,4 +25,11 @@ export class ExplorePage implements OnInit {
     this.videoWomen.nativeElement.autoplay = true;
     this.videoCandles.nativeElement.autoplay = true;
   }
+
+  ionViewWillLeave() {
+    this.videoFull.nativeElement.pause = true;
+    this.videoMen.nativeElement.pause = true;
+    this.videoWomen.nativeElement.pause = true;
+    this.videoCandles.nativeElement.pause = true;
+}
 }
