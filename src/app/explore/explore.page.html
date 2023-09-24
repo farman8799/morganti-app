@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true">
   <div id="video-container">
-    <video id="video-full" autoplay muted>
+    <video id="video-full" #videoFull>
       <source
         src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/Women-Perfume.mp4"
         type="video/mp4"
@@ -19,7 +19,7 @@
 
   <div id="sectionVideo" class="pt-4">
     <div  class="position-relative mb-3">
-      <video controls height="200" width="100%">
+      <video controls height="200" width="100%" #videoMen>
         <source
           src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/men-perfume.mp4"
           type="video/mp4"
@@ -34,7 +34,7 @@
     </div>
 
     <div class="position-relative mb-3">
-      <video controls height="200" width="100%">
+      <video controls height="200" width="100%" #videoWomen>
         <source
           src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/Women-Perfume.mp4"
           type="video/mp4"
@@ -49,7 +49,7 @@
     </div>
     
     <div class="position-relative mb-3">
-      <video controls height="200" width="100%">
+      <video controls height="200" width="100%" #videoCandles>
         <source
           src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/WhatsApp-Video-2023-09-11-at-7.15.20-PM.mp4"
           type="video/mp4"
