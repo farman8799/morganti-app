@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true">
   <div id="video-container">
-    <video id="video-full" #videoFull>
+    <video id="video-full">
       <source
         src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/Women-Perfume.mp4"
         type="video/mp4"
@@ -18,49 +18,14 @@
   </div>
 
   <div id="sectionVideo" class="pt-4">
-    <div  class="position-relative mb-3">
-      <video controls height="200" width="100%" #videoMen>
+    <div  class="position-relative mb-3" *ngFor="let item of videoProperty">
+      <video height="200" width="100%" poster="">
         <source
-          src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/men-perfume.mp4"
+        [src]="item.videoUrl"
           type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
-      <div class="content position-absolute bottom-0 translate-middle start-50 text-center">
-        <h4 class="mb-0">Mens fragrance</h4>
-        <small>Discover Go-14 Bag</small>
-        <h4>Shop Now</h4>
-      </div>
-    </div>
-
-    <div class="position-relative mb-3">
-      <video controls height="200" width="100%" #videoWomen>
-        <source
-          src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/Women-Perfume.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-      <div class="content position-absolute bottom-0 translate-middle start-50 text-center">
-        <h4 class="mb-0">Mens fragrance</h4>
-        <small>Discover Go-14 Bag</small>
-        <h4>Shop Now</h4>
-      </div>
-    </div>
-    
-    <div class="position-relative mb-3">
-      <video controls height="200" width="100%" #videoCandles>
-        <source
-          src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/WhatsApp-Video-2023-09-11-at-7.15.20-PM.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-      <div class="content position-absolute bottom-0 translate-middle start-50 text-center">
-        <h4 class="mb-0">Mens fragrance</h4>
-        <small>Discover Go-14 Bag</small>
-        <h4>Shop Now</h4>
-      </div>
     </div>
   </div>
 </ion-content>
