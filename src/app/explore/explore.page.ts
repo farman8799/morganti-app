@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-explore',
@@ -6,30 +6,55 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./explore.page.scss'],
 })
 export class ExplorePage implements OnInit {
-  @ViewChild('videoFull') videoFull!: ElementRef;
-  @ViewChild('videoMen') videoMen!: ElementRef;
-  @ViewChild('videoWomen') videoWomen!: ElementRef;
-  @ViewChild('videoCandles') videoCandles!: ElementRef;
+  videoProperty= [
+   {
+    videoUrl: 'https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/men-perfume.mp4'
+   },
+   {
+    videoUrl: 'https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/Women-Perfume.mp4'
+   },
+   {
+    videoUrl: 'https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/WhatsApp-Video-2023-09-11-at-7.15.20-PM.mp4'
+   }
+  ]
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {}
 
   ionViewDidEnter() {
-    this.videoFull.nativeElement.muted = true;
-    this.videoMen.nativeElement.muted = true;
-    this.videoWomen.nativeElement.muted = true;
-    this.videoCandles.nativeElement.muted = true;
-    this.videoFull.nativeElement.autoplay = true;
-    this.videoMen.nativeElement.autoplay = true;
-    this.videoWomen.nativeElement.autoplay = true;
-    this.videoCandles.nativeElement.autoplay = true;
+  this.setupVideos(true);
+  }
+
+  ionViewWillEnter(){
+    this.playVideos();
+        
   }
 
   ionViewWillLeave() {
-    this.videoFull.nativeElement.pause = true;
-    this.videoMen.nativeElement.pause = true;
-    this.videoWomen.nativeElement.pause = true;
-    this.videoCandles.nativeElement.pause = true;
+    this.pauseVideos();
+  }
+
+  private setupVideos(muted: boolean) {
+    const videos = document.querySelectorAll('video');
+    videos.forEach((video) => {
+      video.muted = muted;
+      video.currentTime = 0;
+    });
+  }
+
+  private pauseVideos() {
+    const videos = document.querySelectorAll('video');
+    videos.forEach((video) => {
+      video.pause();
+    });
+  }
+
+  private playVideos() {
+    const videos = document.querySelectorAll('video');
+    videos.forEach((video) => {
+      video.play();
+    });
+  }
 }
-}
+
