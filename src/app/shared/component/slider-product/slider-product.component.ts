@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IonicSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-slider-product',
@@ -7,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SliderProductComponent  implements OnInit {
   @Input('sliderProducts') products: any[] = [];
-
+  swiperModules = [IonicSlides];
   constructor() { }
 
   ngOnInit() {}

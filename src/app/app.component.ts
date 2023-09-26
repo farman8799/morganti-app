@@ -3,6 +3,10 @@ import { App } from '@capacitor/app';
 import { AlertController, IonRouterOutlet, Platform, ToastController } from '@ionic/angular';
 import { Optional } from '@angular/core';
 import { Capacitor } from '@capacitor/core';
+import { register } from 'swiper/element/bundle';
+register();
+
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',

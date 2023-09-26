@@ -10,7 +10,7 @@
     <div id="fullscreen">
       <a
         href="/tabs/explore#sectionVideo"
-        class="bg-transparent border border-light rounded-pill d-flex justify-content-center align-items-center"
+        class="bg-transparent bounce border border-light rounded-pill d-flex justify-content-center align-items-center"
       >
         <ion-icon name="chevron-down-outline" size="large"></ion-icon>
       </a>
@@ -26,6 +26,12 @@
         />
         Your browser does not support the video tag.
       </video>
+      <div class="content position-absolute top-50 start-50 translate-middle">
+       <h4> {{ item.title }}</h4>
+      </div>
+    </div>
+    <div class="mb-4">
+      <ion-img src="../../assets/map.svg" alt="map"></ion-img>
     </div>
   </div>
 </ion-content>
