@@ -2,28 +2,52 @@
 
   <ion-tab-bar slot="bottom" class="py-2 bg-white">
     <ion-tab-button tab="explore" href="/tabs/explore">
-      <ion-label>Explore</ion-label>
       <ion-icon name="home-outline"></ion-icon>
     </ion-tab-button>
 
     <ion-tab-button tab="about" href="/tabs/about">
       <ion-img src="../../assets/about-icon.svg" alt="about"></ion-img>
-      <ion-label>About Us</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="home" href="/tabs/home">
       <ion-img src="../../assets/Shop-icon.svg" alt="shop"></ion-img>
-      <ion-label>Shop</ion-label>
-    </ion-tab-button>
+    </ion-tab-button><ion-tabs>
 
-    <ion-tab-button tab="my-account" href="#">
+      <ion-tab-bar slot="bottom" class="py-2 bg-white">
+        <ion-tab-button tab="explore" href="/tabs/explore">
+          <ion-label>Explore</ion-label>
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="about" href="/tabs/about">
+          <ion-img src="../../assets/about-icon.svg" alt="about"></ion-img>
+          <ion-label>About Us</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="home" href="/tabs/home">
+          <ion-img src="../../assets/Shop-icon.svg" alt="shop"></ion-img>
+          <ion-label>Shop</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="my-account" href="#">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-label>My Account</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="cart" href="#">
+          <ion-icon name="cart-outline"></ion-icon>
+          <ion-label>Cart</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    
+    </ion-tabs>
+
+    <ion-tab-button tab="women" href="/tabs/women">
       <ion-icon name="person-circle-outline"></ion-icon>
-      <ion-label>My Account</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="cart" href="#">
-      <ion-icon name="cart-outline"></ion-icon>
-      <ion-label>Cart</ion-label>
+    <ion-tab-button tab="candle" href="/tabs/candle">
+      <ion-icon name="menu-outline"></ion-icon>
     </ion-tab-button>
   </ion-tab-bar>
 
