@@ -43,6 +43,7 @@ export class ExplorePage implements OnInit {
     videos.forEach((video) => {
       video.muted = muted;
       video.currentTime = 0;
+      video.loop = true;
     });
   }
 
