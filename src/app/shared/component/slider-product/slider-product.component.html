@@ -1,9 +1,10 @@
 <ng-container *ngIf="products.length">
   <swiper-container
   [modules]="swiperModules"
-  navigation="true"
   speed="500" 
   loop="true"
+  pagination = 'true'
+
   >
   <swiper-slide *ngFor="let product of products; let i = index" style="width: 300px !important;">
     <img class="display-img" [src]="product.images[0].src" alt="product">
