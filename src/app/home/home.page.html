@@ -1,5 +1,5 @@
 <app-header></app-header>
-<app-slider-product [sliderProducts]="products"></app-slider-product>
+
 <ion-grid>
   <ion-row class="my-4">
     <ion-col size="12" class="bg-transparent">
@@ -31,9 +31,11 @@
       </h1>
     </ion-col>
   </ion-row>
+</ion-grid>
   
-  <app-slider-product [sliderProducts]="products"></app-slider-product>
-  
+<app-slider-product [sliderProducts]="products"></app-slider-product>
+
+<ion-grid>
   <app-card-product [product]="products[0]"></app-card-product>
   <app-card-product [product]="products[1]"></app-card-product>
 
@@ -44,11 +46,13 @@
       </h1>
     </ion-col>
   </ion-row>
+</ion-grid>
 
-  <app-slider-product [sliderProducts]="products"></app-slider-product>
-  
+<app-slider-product [sliderProducts]="products"></app-slider-product>
+
+<ion-grid>
   <app-card-product [product]="products[2]"></app-card-product>
   <app-card-product [product]="products[3]"></app-card-product>
-  
-  <app-slider-product [sliderProducts]="products"></app-slider-product>
 </ion-grid>
+  
+<app-slider-product [sliderProducts]="products"></app-slider-product>
