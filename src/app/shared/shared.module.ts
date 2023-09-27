@@ -5,17 +5,20 @@ import { HeaderComponent } from './header/header.component';
 import { CardProductComponent } from './component/card-product/card-product.component';
 import { ProductComponent } from '../product/product.component';
 import { SliderProductComponent } from './component/slider-product/slider-product.component';
+import { FooterComponent } from '../footer/footer.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
+    FooterComponent,
     ProductComponent,
     CardProductComponent,
     SliderProductComponent,
   ],
   exports: [
     HeaderComponent,
+    FooterComponent,
     ProductComponent,
     CardProductComponent,
     SliderProductComponent,

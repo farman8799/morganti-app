@@ -8,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartSummaryComponent } from './cart-summary/cart-summary.component';
+import { HomeLayoutComponent } from './home-layout/home-layout.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { CartSummaryComponent } from './cart-summary/cart-summary.component';
     SharedModule
   ],
   declarations: [
+    HomeLayoutComponent,
     HomePage,
     ProductDetailComponent,
     CheckoutComponent,
