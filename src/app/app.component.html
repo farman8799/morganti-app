@@ -1,3 +1,9 @@
 <ion-app>
-    <ion-router-outlet></ion-router-outlet>
+    <ion-img
+        *ngIf="showGifImage; else router"
+        src="./../assets/app-start.gif"
+        class="full-screen-image"></ion-img>
+    <ng-template #router>
+        <ion-router-outlet></ion-router-outlet>
+    </ng-template>
 </ion-app>
