@@ -6,37 +6,6 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-    // component: MainLayoutComponent,
-    // children: [
-    //   {
-    //     path: 'home',
-    //     loadChildren: () => import('./home/home.module').then((m) => m.HomePageModule),
-    //   },
-    //   {
-    //     path: 'about-us',
-    //     component: AboutUsComponent,
-    //   },
-    //   {
-    //     path: 'contact-us',
-    //     component: ContactUsComponent,
-    //   },
-    //   {
-    //     path: 'term-condition',
-    //     component: TermConditionComponent,
-    //   },
-    //   {
-    //     path: 'privacy-policy',
-    //     component: PrivacyPolicyComponent,
-    //   },
-    //   {
-    //     path: 'delivery-return',
-    //     component: DeliveryReturnComponent,
-    //   },
-    //   {
-    //     path: 'address',
-    //     component: AddressComponent,
-    //   }
-    // ]
   },
   {
     path: 'not-found',
