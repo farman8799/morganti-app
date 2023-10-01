@@ -10,6 +10,10 @@ export class ProductService {
   getProducts() {
     return this.http.get('products');
   }
+  
+  getProductById(id: number) {
+    return this.http.get(`products/${id}`);
+  }
 
   getCategories() {
     return this.http.get('products/categories');

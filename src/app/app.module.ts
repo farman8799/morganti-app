@@ -26,7 +26,7 @@ import { SharedModule } from './shared/shared.module';
     TermConditionComponent,
     DeliveryReturnComponent,
     AddressComponent,
-    MainLayoutComponent
+    MainLayoutComponent,
   ],
   imports: [
     BrowserModule,

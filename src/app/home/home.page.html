@@ -1,7 +1,8 @@
 <ion-grid>
   <ion-row>
     <ion-col size="12" class="bg-transparent">
-      <app-category-filter (onCategorySelect)="handleCategorySelect($event)"></app-category-filter>
+      <app-category-filter
+        (onCategorySelect)="handleCategorySelect($event)"></app-category-filter>
     </ion-col>
   </ion-row>
 
@@ -12,7 +13,12 @@
       </p>
     </ion-col>
   </ion-row>
-  <app-card-product [product]="cardProducts[0]"></app-card-product>
+
+  <ng-container *ngFor="let item of [0]">
+    <app-card-product
+      [product]="cardProducts[item]"
+      (handleShopButtonClick)="handleShopButtonClick($event)"></app-card-product>
+  </ng-container>
 </ion-grid>
 
 <ion-grid>
@@ -28,8 +34,11 @@
 <app-slider-product [sliderProducts]="products"></app-slider-product>
 
 <ion-grid>
-  <app-card-product [product]="cardProducts[1]"></app-card-product>
-  <app-card-product [product]="cardProducts[2]"></app-card-product>
+  <ng-container *ngFor="let item of [1, 2]">
+    <app-card-product
+      [product]="cardProducts[item]"
+      (handleShopButtonClick)="handleShopButtonClick($event)"></app-card-product>
+  </ng-container>
 
   <ion-row>
     <ion-col size="12">
@@ -43,8 +52,11 @@
 <app-slider-product [sliderProducts]="products"></app-slider-product>
 
 <ion-grid>
-  <app-card-product [product]="cardProducts[3]"></app-card-product>
-  <app-card-product [product]="cardProducts[4]"></app-card-product>
+  <ng-container *ngFor="let item of [3, 4]">
+    <app-card-product
+      [product]="cardProducts[item]"
+      (handleShopButtonClick)="handleShopButtonClick($event)"></app-card-product>
+  </ng-container>
 </ion-grid>
   
 <ion-row>
@@ -54,4 +66,5 @@
     </h1>
   </ion-col>
 </ion-row>
+
 <app-slider-product [sliderProducts]="products"></app-slider-product>

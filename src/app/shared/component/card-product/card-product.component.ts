@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card-product',
@@ -8,15 +7,15 @@ import { Router } from '@angular/router';
 })
 export class CardProductComponent  implements OnInit {
   @Input('product') product: any;
+  @Output('handleShopButtonClick') handleShopButtonClick = new EventEmitter();
 
   constructor(
-    private router: Router
   ) { }
 
   ngOnInit() {}
 
-  redirect(product: any) {
-    this.router.navigate([`/tabs/home/product-detail/${product.id}`])
+  onShopButtonClick(product: any) {
+    this.handleShopButtonClick.emit(product);
   }
 
 }
