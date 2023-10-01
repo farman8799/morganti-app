@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
+import { CardProducts } from './card-products';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,7 @@ import { ProductService } from '../product.service';
 })
 export class HomePage implements OnInit {
   products: any[] = [];
+  cardProducts: any[] = CardProducts;
 
   constructor(private productService:ProductService) { }
 
@@ -38,5 +40,10 @@ export class HomePage implements OnInit {
         localStorage.setItem('products', JSON.stringify(this.products))
       }
     });
+  }
+
+  handleCategorySelect(category: {key: string, name: string}) {
+    console.log(category);
+    
   }
 }

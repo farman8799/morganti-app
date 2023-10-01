@@ -9,6 +9,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartSummaryComponent } from './cart-summary/cart-summary.component';
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
+import { CategoryFilterComponent } from './category-filter/category-filter.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { HomeLayoutComponent } from './home-layout/home-layout.component';
     ProductDetailComponent,
     CheckoutComponent,
     CheckoutComponent,
-    CartSummaryComponent
+    CartSummaryComponent,
+    CategoryFilterComponent
   ]
 })
 export class HomePageModule {}

@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.showGifImage = false;
-    }, 2000);
+    }, 3000);
   }
 
   exitAppOnAlert() {
