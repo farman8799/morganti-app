@@ -1,5 +1,6 @@
 export const CardProducts = [
     {
+        id: 4436,
         title: 'Morganti',
         name: 'HYPNOTIC',
         image: 'https://morgantiluxury.com/wp-content/uploads/2023/08/hypnotic-banner-1-1.jpg',
@@ -7,6 +8,7 @@ export const CardProducts = [
         price: 950
     },
     {
+        id: 4439,
         title: 'Morganti',
         name: `CÈDRE D'OR `,
         image: 'https://morgantiluxury.com/wp-content/uploads/2023/08/cedre-banner-1-2.jpg',
@@ -14,6 +16,7 @@ export const CardProducts = [
         price: 950
     },
     {
+        id: 5511,
         title: 'Morganti',
         name: 'SALMAN',
         image: 'https://morgantiluxury.com/wp-content/uploads/2023/08/salman-banner-1.jpg',
@@ -21,6 +24,7 @@ export const CardProducts = [
         price: 1250
     },
     {
+        id: 5510,
         title: 'Morganti',
         name: 'TASNIM',
         image: 'https://morgantiluxury.com/wp-content/uploads/2023/08/tasnim-banner-1.jpg',
@@ -28,6 +32,7 @@ export const CardProducts = [
         price: 1250
     },
     {
+        id: 5513,
         title: 'Morganti',
         name: 'CANDLES',
         image: 'https://morgantiluxury.com/wp-content/uploads/2023/08/vanillasign-banner-1.jpg',
