@@ -1,19 +1,10 @@
 <ion-grid>
-  <ion-row class="my-4">
+  <ion-row>
     <ion-col size="12" class="bg-transparent">
-      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active bg-transparent text-body-tertiary fw-bold" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Men</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link bg-transparent text-body-tertiary fw-bold" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Women's</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link bg-transparent text-body-tertiary fw-bold" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Candles</button>
-        </li>
-      </ul>
+      <app-category-filter (onCategorySelect)="handleCategorySelect($event)"></app-category-filter>
     </ion-col>
   </ion-row>
+
   <ion-row>
     <ion-col size="12">
       <p class="ion-text-center fs-16">
@@ -21,7 +12,10 @@
       </p>
     </ion-col>
   </ion-row>
-  
+  <app-card-product [product]="cardProducts[0]"></app-card-product>
+</ion-grid>
+
+<ion-grid>
   <ion-row>
     <ion-col size="12">
       <h1 class="ion-text-center text-black fs-24 fw-400 border py-10">
@@ -34,8 +28,8 @@
 <app-slider-product [sliderProducts]="products"></app-slider-product>
 
 <ion-grid>
-  <app-card-product [product]="products[0]"></app-card-product>
-  <app-card-product [product]="products[1]"></app-card-product>
+  <app-card-product [product]="cardProducts[1]"></app-card-product>
+  <app-card-product [product]="cardProducts[2]"></app-card-product>
 
   <ion-row>
     <ion-col size="12">
@@ -49,8 +43,15 @@
 <app-slider-product [sliderProducts]="products"></app-slider-product>
 
 <ion-grid>
-  <app-card-product [product]="products[2]"></app-card-product>
-  <app-card-product [product]="products[3]"></app-card-product>
+  <app-card-product [product]="cardProducts[3]"></app-card-product>
+  <app-card-product [product]="cardProducts[4]"></app-card-product>
 </ion-grid>
   
+<ion-row>
+  <ion-col size="12">
+    <h1 class="ion-text-center text-black fs-24 fw-400 border py-10">
+      SCENT CANDLES
+    </h1>
+  </ion-col>
+</ion-row>
 <app-slider-product [sliderProducts]="products"></app-slider-product>
