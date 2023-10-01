@@ -22,16 +22,12 @@ const routes: Routes = [
         loadChildren: () => import('./../home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'men',
-        loadChildren: () => import('./../mens-fragrances/mens-fragrances.module').then(m => m.MensFragrancesPageModule)
+        path: 'my-account',
+        loadChildren: () => import('./../my-account/my-account.module').then(m => m.MyAccountPageModule)
       },
       {
-        path: 'women',
-        loadChildren: () => import('./../womens-fragrances/womens-fragrances.module').then(m => m.WomensFragrancesPageModule)
-      },
-      {
-        path: 'candle',
-        loadChildren: () => import('./../candles/candles.module').then(m => m.CandlesPageModule)
+        path: 'cart',
+        loadChildren: () => import('./../cart/cart.module').then( m => m.CartPageModule)
       },
       {
         path: '',
