@@ -1,13 +1,17 @@
 <ng-container *ngIf="products.length">
   <swiper-container
+  [slidesPerView]="1"
   [modules]="swiperModules"
   [speed]="500" 
   [loop]="true"
   [pagination]="true"
   [navigation]="true"
-  [autoplay]="true"
+  [autoplay]="{enable:true, delay: 1000}"
   >
-  <swiper-slide *ngFor="let product of products; let i = index" style="width: 300px !important;">
+  <swiper-slide
+    *ngFor="let product of products; let i = index"
+    style="width: 300px !important;"
+    [attr.data-swiper-autoplay]="1000">
     <img class="display-img" [src]="product.images[0].src" alt="product">
     <ion-card-title class="ion-text-center fs-24">
       {{ product.name }}{{ products.length}}

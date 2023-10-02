@@ -8,7 +8,9 @@ import { IonicSlides } from '@ionic/angular';
 })
 export class SliderProductComponent  implements OnInit {
   @Input('sliderProducts') products: any[] = [];
+
   swiperModules = [IonicSlides];
+  
   constructor() { }
 
   ngOnInit() {}

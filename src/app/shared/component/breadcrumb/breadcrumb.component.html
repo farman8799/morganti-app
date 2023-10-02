@@ -1,0 +1,16 @@
+<ion-breadcrumbs>
+  <ng-container *ngFor="let breadcrumb of breadcrumbs">
+    <ion-breadcrumb
+      class="font-color fs-14"
+      [ngClass]="breadcrumb.classes">
+
+        <ng-container *ngIf="breadcrumb.icon">
+          <ion-icon
+            [name]="breadcrumb.icon.name"
+            class="pe-2"></ion-icon>
+        </ng-container>
+
+        {{ breadcrumb.text }}
+    </ion-breadcrumb>
+  </ng-container>
+</ion-breadcrumbs>
