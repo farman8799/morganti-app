@@ -12,6 +12,7 @@ interface Category {
 })
 export class CategoryFilterComponent {
   @Output() onCategorySelect = new EventEmitter<Category>();
+  selectedCategory: number = 0;
 
   categories: Category[] = [
     {
@@ -30,8 +31,9 @@ export class CategoryFilterComponent {
 
   constructor() { }
 
-  onClick(category: Category): void {
-    this.onCategorySelect.emit(category);
+  onClick(index: number): void {
+    this.selectedCategory = index;
+    this.onCategorySelect.emit(this.categories[index]);
   }
 
 }
