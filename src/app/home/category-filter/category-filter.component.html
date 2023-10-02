@@ -1,11 +1,12 @@
-<ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
-  <ng-container *ngFor="let category of categories">
+<ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
+  <ng-container *ngFor="let category of categories; let i = index">
     <li class="nav-item" role="presentation">
       <button
-        class="nav-link active bg-transparent text-body-tertiary fw-bold"
+        class="nav-link bg-transparent text-body-tertiary fw-bold px-4"
+        [ngClass]="i === selectedCategory ? 'active' : ''"
         type="button"
         aria-controls="pills-home"
-        (click)="onClick(category)">
+        (click)="onClick(i)">
           {{ category.name | titlecase }}
       </button>
     </li>
