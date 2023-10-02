@@ -5,9 +5,31 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">my-account</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
+  <ion-grid>
+    <ion-row class="px-4 mt-5">
+        <ion-col size="12">
+          <input class="form-control form-control-lg" type="text" placeholder="Name" aria-label="Name">
+        </ion-col>
+        <ion-col size="12">
+          <input class="form-control form-control-lg" type="email" placeholder="Email" aria-label="Email">
+        </ion-col>
+        <ion-col size="12">
+          <input class="form-control form-control-lg" type="password" placeholder="Password" aria-label="password">
+        </ion-col>
+        <ion-col size="12">
+          <input class="form-control form-control-lg" type="tel" placeholder="Mobile" aria-label="Mobile">
+        </ion-col>
+       <ion-col size="12">
+        <ion-button class="w-100" color="dark">Continue</ion-button> 
+       </ion-col>
+       <ion-col size="12" class="text-center">
+       <p>Already have an account <a href="#">Login</a></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

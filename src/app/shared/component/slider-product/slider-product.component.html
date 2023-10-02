@@ -13,13 +13,13 @@
     style="width: 300px !important;"
     [attr.data-swiper-autoplay]="1000">
     <img class="display-img" [src]="product.images[0].src" alt="product">
-    <ion-card-title class="ion-text-center fs-24">
+    <ion-card-title class="ion-text-center small mt-3 fw-400">
       {{ product.name }}{{ products.length}}
     </ion-card-title>
-      <ion-card-content class="ion-text-center">
+      <ion-card-content class="ion-text-center ion-no-padding">
         <div class="d-flex ion-align-items-center ion-justify-content-center">
-          <h2 class="fs-20 fw-700 text-black">
-            {{ product.price | currency:'AED'}}
+          <h2 class="w-700 mt-2 gray-dark">
+          <strong>  {{ product.price | currency:'AED'}}</strong>
             <span class="fw-200 ps-10">
               Plus GCC Duty & VAT
             </span>
