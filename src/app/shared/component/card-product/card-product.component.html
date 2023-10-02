@@ -5,33 +5,33 @@
 </ion-row>
 <ion-row>
   <ion-col size="12">
-    <ion-card class="outline-black ion-text-center ion-padding-vertical">
+    <ion-card class="border rounded-0 shadow-none ion-text-center ion-padding-vertical px-4">
       <ion-img
         src="../../assets/logo.svg"
         style="width: 180px"
         class="d-block mx-auto"
         alt="product"
       ></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle class="fs-24 text-black fw-400 font-style">
+      <ion-card-header class="ion-no-padding my-3">
+        <ion-card-subtitle class="fs-18 text-black  p-0">
           {{ product?.name }}
         </ion-card-subtitle>
       </ion-card-header>
-      <ion-card-content class="fs-14 text-black" [innerHTML]="product?.description">
-      </ion-card-content>
+      <p class="text-black" [innerHTML]="product?.description">
+      </p>
       <div class="d-flex ion-align-items-center ion-justify-content-center">
         <ion-icon
           name="card-outline"
           size="large"
           class="text-black"
         ></ion-icon>
-        <span class="ps-10 fs-24 text-black">
+        <span class="ps-10 fs-24 fw-normal text-black culinia-font">
           {{ product?.price | currency:'AED'}}
         </span>
       </div>
       <ion-button
         fill="ion-outline-none"
-        class="text-black outline-black ion-margin-top px-14"
+        class="text-black border border-black ion-margin-top px-4"
         routerLink="product-detail/product_id"
         >Shop Now</ion-button
       >
