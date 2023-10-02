@@ -29,8 +29,7 @@ export class HomePage implements OnInit {
   getProducts() {
     this.productService.getProducts().subscribe({
       next: (data: any) => {
-        this.products = data;
-        this.products = this.products.map(product => this.mapProduct(product));
+        this.products = this.products.map(product => this.mapProduct(data));
 
         localStorage.setItem('products', JSON.stringify(this.products))
       }

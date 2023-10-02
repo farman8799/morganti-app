@@ -6,6 +6,7 @@ import { CardProductComponent } from './component/card-product/card-product.comp
 import { ProductComponent } from '../product/product.component';
 import { SliderProductComponent } from './component/slider-product/slider-product.component';
 import { FooterComponent } from '../footer/footer.component';
+import { BreadcrumbComponent } from './component/breadcrumb/breadcrumb.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { FooterComponent } from '../footer/footer.component';
     ProductComponent,
     CardProductComponent,
     SliderProductComponent,
+    BreadcrumbComponent,
   ],
   exports: [
     HeaderComponent,
@@ -22,6 +24,7 @@ import { FooterComponent } from '../footer/footer.component';
     ProductComponent,
     CardProductComponent,
     SliderProductComponent,
+    BreadcrumbComponent,
   ],
   imports: [
     CommonModule,
