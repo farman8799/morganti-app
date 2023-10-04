@@ -15,7 +15,7 @@ register();
 export class AppComponent implements OnInit {
   
   tap = 0;
-  showGifImage: boolean = true;
+  showGifImage: boolean = false;
 
   constructor(private platform: Platform,
     private toastCtrl: ToastController,
