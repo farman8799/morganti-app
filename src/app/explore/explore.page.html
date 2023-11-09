@@ -1,13 +1,13 @@
 <ion-content [fullscreen]="true">
-  <div id="video-container">
-    <video id="video-full" poster="./../../assets/poster1.png">
+  <div class="video-container">
+    <video class="video-full" poster="./../../assets/poster1.png">
       <source
         src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/Women-Perfume.mp4"
         type="video/mp4"
       />
       Your browser does not support the video tag.
     </video>
-    <div id="fullscreen">
+    <div class="fullscreen">
       <a
         href="/tabs/explore#sectionVideo"
         class="bg-transparent bounce border border-light rounded-pill d-flex justify-content-center align-items-center"
@@ -16,10 +16,11 @@
       </a>
     </div>
   </div>
+  
 
-  <div id="sectionVideo" class="pt-4">
-    <div  class="position-relative mb-3" *ngFor="let item of videoProperty">
-      <video height="200" width="100%" [poster]="item.poster">
+  <div class="video-container" id="sectionVideo" class="pt-0">
+    <div  class="position-relative mb-0" *ngFor="let item of videoProperty">
+      <video class="video-full" height="200" width="100%" [poster]="item.poster">
         <source
         [src]="item.videoUrl"
           type="video/mp4"
@@ -30,8 +31,8 @@
        <h4> {{ item.title }}</h4>
       </div>
     </div>
-    <div class="mb-4">
+    <!-- <div class="mb-4">
       <ion-img src="../../assets/map.svg" alt="map"></ion-img>
-    </div>
+    </div> -->
   </div>
 </ion-content>
