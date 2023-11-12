@@ -40,6 +40,7 @@ export class ExplorePage implements OnInit {
   ionViewWillLeave() {
     this.pauseVideos();
   }
+  
 
   private setupVideos(muted: boolean) {
     const videos = document.querySelectorAll('video');
@@ -63,4 +64,5 @@ export class ExplorePage implements OnInit {
       video.play();
     });
   }
+  
 }
