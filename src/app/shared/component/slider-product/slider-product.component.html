@@ -1,32 +1,32 @@
 <ng-container *ngIf="products.length">
   <swiper-container
-  [slidesPerView]="1"
-  [modules]="swiperModules"
-  [speed]="500" 
-  [loop]="true"
-  [pagination]="true"
-  autoplay = "true"
-  delay="1000"
+    [slidesPerView]="1"
+    [modules]="swiperModules"
+    [speed]="500" 
+    [loop]="true"
+    [pagination]="true"
+    autoplay = "true"
+    delay="1000"
   >
-  <swiper-slide
-    *ngFor="let product of products; let i = index"
-    style="width: 300px !important;"
-    [attr.data-swiper-autoplay]="1000">
-    <img class="display-img" [src]="product.images[0].src" alt="product">
-    <ion-card-title class="ion-text-center small mt-3 fw-400">
-      {{ product.name }}{{ products.length}}
-    </ion-card-title>
-      <ion-card-content class="ion-text-center ion-no-padding">
-        <div class="d-flex ion-align-items-center ion-justify-content-center">
-          <h2 class="w-700 mt-2 gray-dark">
-          <strong>  {{ product.price | currency:'AED'}}</strong>
-            <span class="fw-200 ps-10">
-              Plus GCC Duty & VAT
-            </span>
-          </h2>
-          <ion-img src="../../assets/icon.svg" class="ps-10" alt="icon"></ion-img>
-        </div>
-      </ion-card-content>
-  </swiper-slide>
-</swiper-container>
+    <swiper-slide
+      *ngFor="let product of products; let i = index"
+      style="width: 300px !important;"
+      [attr.data-swiper-autoplay]="1000">
+      <img class="display-img" [src]="product.images[0].src" alt="product">
+      <ion-card-title class="ion-text-center small mt-3 fw-400">
+        {{ product.name }}{{ products.length}}
+      </ion-card-title>
+        <ion-card-content class="ion-text-center ion-no-padding">
+          <div class="d-flex ion-align-items-center ion-justify-content-center">
+            <h2 class="w-700 mt-2 gray-dark">
+            <strong>  {{ product.price | currency:'AED'}}</strong>
+              <span class="fw-200 ps-10">
+                Plus GCC Duty & VAT
+              </span>
+            </h2>
+            <ion-img src="../../assets/icon.svg" class="ps-10" alt="icon"></ion-img>
+          </div>
+        </ion-card-content>
+    </swiper-slide>
+  </swiper-container>
 </ng-container>
