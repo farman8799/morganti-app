@@ -1,5 +1,40 @@
 <ion-content [fullscreen]="true">
-  <div class="video-container">
+  <ng-container *ngIf="videos.length">
+    <swiper-container
+      [slidesPerView]="1"
+      [modules]="swiperModules"
+      [speed]="500" 
+      [loop]="true"
+      [pagination]="true"
+      [delay]="1000"
+      [direction]="'vertical'"
+      (slidechange)="onSlideChange($event)"
+    >
+      <swiper-slide
+        *ngFor="let video of videos; let i = index">
+        <div class="video-container" id="sectionVideo" class="pt-0">
+          <div class="position-relative mb-0">
+            <video
+              class="video-full"
+              height="200"
+              width="100%"
+              [poster]="video.poster"
+            >
+              <source [src]="video.videoUrl" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="content position-absolute top-50 start-50 translate-middle w-100 text-center">
+              <h4>
+                {{ video.title }}
+              </h4>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </ng-container>
+
+  <!-- <div class="video-container">
     <video class="video-full" poster="./../../assets/poster1.png">
       <source
         src="https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/Women-Perfume.mp4"
@@ -8,44 +43,67 @@
       Your browser does not support the video tag.
     </video>
     <div class="content position-absolute top-50 start-50 translate-middle w-100 text-center">
-      <h4 class="mb-4">  Men Fragrance </h4>
+      <h4 class="mb-4">
+        Men Fragrance
+      </h4>
       <a
-      href="/tabs/explore#sectionVideo"
-      class="bg-transparent border border-light rounded-pill d-flex  d-block m-auto justify-content-center align-items-center"
-    >
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-    </svg>
-    </a>
-     </div>
-      <div class="fullscreen">
-        <a
-          href="/tabs/explore#sectionVideo"
-          class="bg-transparent text-white bounce d-flex justify-content-center align-items-center"
+        href="/tabs/explore#sectionVideo"
+        class="bg-transparent border border-light rounded-pill d-flex d-block m-auto justify-content-center align-items-center"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-chevron-right"
+          viewBox="0 0 16 16"
         >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+          <path
+            fill-rule="evenodd"
+            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+          />
         </svg>
-        </a>
-      </div>
+      </a>
+    </div>
+
+    <div class="fullscreen">
+      <a
+        href="/tabs/explore#sectionVideo"
+        class="bg-transparent text-white bounce d-flex justify-content-center align-items-center"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          class="bi bi-arrow-down"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
+          />
+        </svg>
+      </a>
+    </div>
   </div>
-  
 
   <div class="video-container" id="sectionVideo" class="pt-0">
-    <div  class="position-relative mb-0" *ngFor="let item of videoProperty">
-      <video class="video-full" height="200" width="100%" [poster]="item.poster">
-        <source
-        [src]="item.videoUrl"
-          type="video/mp4"
-        />
+    <div class="position-relative mb-0" *ngFor="let video of videos">
+      <video
+        class="video-full"
+        height="200"
+        width="100%"
+        [poster]="video.poster"
+      >
+        <source [src]="video.videoUrl" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div class="content position-absolute top-50 start-50 translate-middle w-100 text-center">
-       <h4> {{ item.title }}</h4>
+        <h4>
+          {{ video.title }}
+        </h4>
       </div>
     </div>
-    <!-- <div class="mb-4">
-      <ion-img src="../../assets/map.svg" alt="map"></ion-img>
-    </div> -->
-  </div>
+  </div> -->
 </ion-content>

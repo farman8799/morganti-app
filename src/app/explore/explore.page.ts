@@ -1,4 +1,6 @@
 import { Component, OnInit} from '@angular/core';
+import { Videos } from './explore-data';
+import { IonicSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-explore',
@@ -6,45 +8,29 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./explore.page.scss'],
 })
 export class ExplorePage implements OnInit {
-  videoProperty= [
-   {
-    videoUrl: 'https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/men-perfume.mp4',
-    title: 'Men Fragrance',
-    poster: './../../assets/poster1.png'
-   },
-   {
-    videoUrl: 'https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/Women-Perfume.mp4',
-    title: 'Women Fragrance',
-    poster: './../../assets/poster2.png'
-   },
-   {
-    videoUrl: 'https://morganti.letshavewebsite.com/wp-content/uploads/2023/09/WhatsApp-Video-2023-09-11-at-7.15.20-PM.mp4',
-    title: 'Candles',
-    poster: './../../assets/poster3.png'
-   }
-  ]
+  videos = Videos;
+  swiperModules = [IonicSlides];
+  videoRef!: NodeListOf<HTMLVideoElement>;
 
   constructor() { }
 
   ngOnInit() {}
 
   ionViewDidEnter() {
-  this.setupVideos(true);
+    this.setupVideos();
   }
 
   ionViewWillEnter(){
-    this.playVideos();
-        
+    this.videoRef = (document.querySelectorAll('video')) ;
+    this.playVideo();
   }
 
   ionViewWillLeave() {
     this.pauseVideos();
   }
   
-
-  private setupVideos(muted: boolean) {
-    const videos = document.querySelectorAll('video');
-    videos.forEach((video) => {
+  private setupVideos(muted: boolean = true) {
+    this.videoRef.forEach((video: HTMLVideoElement) => {
       video.muted = muted;
       video.currentTime = 0;
       video.loop = true;
@@ -52,17 +38,21 @@ export class ExplorePage implements OnInit {
   }
 
   private pauseVideos() {
-    const videos = document.querySelectorAll('video');
-    videos.forEach((video) => {
+    this.videoRef.forEach((video: HTMLVideoElement) => {
       video.pause();
+      video.currentTime = 0;
     });
   }
 
-  private playVideos() {
-    const videos = document.querySelectorAll('video');
-    videos.forEach((video) => {
-      video.play();
-    });
+  private playVideo(index: number = 0) {
+    this.videoRef[index].play();
+  }
+
+  onSlideChange(ev: any) {
+    const {realIndex} = ev.detail[0];
+    
+    this.pauseVideos();
+    this.playVideo(realIndex);
   }
   
 }
