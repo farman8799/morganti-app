@@ -1,37 +1,32 @@
 <ion-content [fullscreen]="true">
-  <ng-container *ngIf="videos.length">
-    <swiper-container
-      [slidesPerView]="1"
-      [modules]="swiperModules"
-      [speed]="500" 
-      [loop]="true"
-      [delay]="1000"
-      [direction]="'vertical'"
-      (slidechange)="onSlideChange($event)"
-    >
-      <swiper-slide
-        *ngFor="let video of videos; let i = index">
-        <div class="video-container" id="sectionVideo" class="pt-0">
-          <div class="position-relative mb-0">
-            <video
-              class="video-full"
-              height="200"
-              width="100%"
-              [poster]="video.poster"
-            >
-              <source [src]="video.videoUrl" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div class="content position-absolute top-50 start-50 translate-middle w-100 text-center">
-              <h4>
-                {{ video.title }}
-              </h4>
-            </div>
-          </div>
+  <swiper-container
+    [slidesPerView]="1"
+    [modules]="swiperModules"
+    [speed]="500" 
+    [loop]="true"
+    [delay]="1000"
+    (slidechange)="onSlideChange($event)"
+  >
+    <swiper-slide
+      *ngFor="let video of videos; let i = index">
+      <div class="position-relative mb-0">
+        <video
+          class="video-full"
+          height="200"
+          width="100%"
+          [poster]="video.poster"
+        >
+          <source [src]="video.videoUrl" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="content position-absolute top-50 start-50 translate-middle w-100 text-center">
+          <h4>
+            {{ video.title }}
+          </h4>
         </div>
-      </swiper-slide>
-    </swiper-container>
-  </ng-container>
+      </div>
+    </swiper-slide>
+  </swiper-container>
 
   <!-- <div class="video-container">
     <video class="video-full" poster="./../../assets/poster1.png">
